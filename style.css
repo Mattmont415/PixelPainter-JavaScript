@@ -1,0 +1,127 @@
+body {
+    background-color: brown;
+    color: white;
+    font-family: verdana, courier, sans-serif;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 60vh;
+    min-height: 60vh;
+    background-color: red;
+}
+
+#colorborder {
+    padding: 2px;
+    border: 2px solid black;
+}
+
+#options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+button {
+    height: 60px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 3px 6px 5px;
+}
+button:hover {
+    background-color: yellow;
+}
+
+button:active {
+    background-color: lightgray;
+    box-shadow: 2px 3px 3px;
+    transform: translateY(3px);
+    
+}
+
+/*#reset {
+    height: 60px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 3px 6px 5px;
+}
+
+#reset:hover {
+    background-color: yellow;
+}
+
+#reset:active {
+    background-color: lightgray;
+    box-shadow: 2px 3px 3px;
+    transform: translateY(3px);
+    
+}
+#gridlines {
+    height: 60px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 3px 6px 5px;
+}
+
+#gridlines:hover {
+    background-color: yellow;
+}
+
+#gridlines:active {
+    background-color: lightgray;
+    box-shadow: 2px 3px 3px;
+    transform: translateY(3px);
+    
+}*/
+
+
+
+
+#topcontainer {
+    text-align: center;
+    background-color: red;
+    padding: 5px;
+    margin: 20px;
+    border: 15px solid black;
+    border-radius: 15px;
+}
+
+.canvas {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.square {
+    box-sizing:border-box;  
+}
+
+.grid-item {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.grid-lines {
+    border: 1px solid black;
+}
+
