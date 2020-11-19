@@ -5,7 +5,7 @@ const mainContainerWidth = 60;
 const blankColor = '#f9faf5';
 const startingBoardSize = 16;
 const gridItem = document.getElementsByClassName("grid-item");
-const buttonColorPicker = document.getElementById("color-picker");
+const buttonColorPicker = document.getElementById("color-picker").innerHTML;
 let gridLines = 0;
 //const buttonGridLines = document.getElementById("grid-lines");
 
@@ -17,7 +17,7 @@ let squareWidth = 0;
 let userBoardSize;
 let mouseDown = false;
 let isErase = false;
-let currentColor = "black";
+let currentColor = document.getElementById("color-picker").value;
 
 //get the canvas to work on, the class from the div
 let canvas = document.querySelector(".canvas");
@@ -85,11 +85,14 @@ function colorHoverEffect() {
     for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].addEventListener("mouseover", function () {
 
-            gridItem[i].style.backgroundColor = buttonColorPicker.value;
+            gridItem[i].style.backgroundColor = buttonColorPicker.target.value;
+            gridItem[i].style.color = buttonColorPicker.target.value;
         })
     }
-    colorValue.style.color = buttonColorPicker.value;
-    colorValue.textContent = buttonColorPicker.value;
+    currentColor.style.color = buttonColorPicker.target.value;
+    // gridItem.style.color = buttonColorPicker.value;
+    currentColor.textContent = buttonColorPicker.target.value;
+    // gridItem.textContent = buttonColorPicker.value;
 }
 
 
