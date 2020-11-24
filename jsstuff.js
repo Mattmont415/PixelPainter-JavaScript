@@ -5,8 +5,9 @@ const mainContainerWidth = 60;
 const blankColor = '#f9faf5';
 const startingBoardSize = 16;
 const gridItem = document.getElementsByClassName("grid-item");
-const buttonColorPicker = document.getElementById("color-picker").innerHTML;
+const buttonColorPicker = document.getElementById("color-picker");
 let gridLines = 0;
+
 //const buttonGridLines = document.getElementById("grid-lines");
 
 
@@ -53,6 +54,15 @@ function makeGrid(numSquares) {
 
     colorSquare(currentColor);
 }
+
+
+//Adding an event for the change of input when making colors
+buttonColorPicker.addEventListener('input', updateValue);
+
+function updateValue(val) {
+  colorSquare(val.target.value);
+}
+
 
 
 function colorSquare(currentColor) {
